@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gewenbo Store — Premium Resources</title>
+<meta name="description" content="Premium bilingual educational resources — AI tools, history, technology, and philosophy. Digital downloads and interactive guides.">
+<meta property="og:title" content="Gewenbo Store — Premium Resources">
+<meta property="og:description" content="Premium bilingual educational resources — AI tools, history, technology, and philosophy.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230a0a0a'/><text x='32' y='42' text-anchor='middle' font-family='serif' font-size='28' font-weight='700' fill='%23f0f0f0'>G</text></svg>">
+<script defer src="https://analytics-dashboard-two-blue.vercel.app/tracker.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fafaf8;--ink:#0a0a0a;--ink2:#444;--dim:#999;
+  --green:#1a7a4a;--green-bg:rgba(26,122,74,.06);--green-border:rgba(26,122,74,.15);
+  --rule:rgba(0,0,0,.06);
+  --shadow:0 1px 3px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.06);
+  --shadow-lg:0 4px 12px rgba(0,0,0,.06),0 20px 48px rgba(0,0,0,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:'Manrope',sans-serif;font-weight:400;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.cn{font-family:'Noto Sans SC',sans-serif;}
+
+nav{
+  max-width:900px;margin:0 auto;padding:20px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--rule);
+}
+.nav-logo{font-weight:800;font-size:.9rem;}
+.nav-links{display:flex;gap:14px;}
+.nav-links a{font-size:.75rem;font-weight:500;color:var(--dim);text-decoration:none;}
+.nav-links a:hover{color:var(--ink);}
+
+.hero{max-width:900px;margin:0 auto;padding:60px 24px 40px;text-align:center;}
+.hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;}
+.hero .sub{font-size:.95rem;color:var(--dim);margin-top:10px;max-width:500px;margin-left:auto;margin-right:auto;}
+.hero .sub-cn{font-family:'Noto Sans SC',sans-serif;font-size:.82rem;color:var(--dim);margin-top:6px;}
+.hero .badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--green);background:var(--green-bg);border:1px solid var(--green-border);
+  padding:5px 14px;border-radius:100px;margin-bottom:20px;
+}
+
+.products{max-width:900px;margin:0 auto;padding:0 24px 60px;display:flex;flex-direction:column;gap:20px;}
+
+.product{
+  background:#fff;border:1px solid var(--rule);border-radius:18px;
+  padding:32px;display:grid;grid-template-columns:1fr auto;gap:24px;
+  align-items:center;box-shadow:var(--shadow);transition:all .2s;
+}
+.product:hover{box-shadow:var(--shadow-lg);transform:translateY(-2px);}
+@media(max-width:600px){.product{grid-template-columns:1fr;}}
+
+.product .tag{
+  font-size:.55rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 10px;border-radius:5px;display:inline-block;margin-bottom:10px;
+}
+.tag-free{background:var(--green-bg);color:var(--green);}
+.tag-premium{background:rgba(204,120,0,.08);color:#cc7800;}
+.tag-bundle{background:rgba(100,60,200,.06);color:#6438c8;}
+
+.product h2{font-size:1.2rem;font-weight:700;margin-bottom:4px;}
+.product .prod-cn{font-family:'Noto Sans SC',sans-serif;font-size:.82rem;color:var(--dim);margin-bottom:8px;}
+.product p{font-size:.85rem;color:var(--ink2);}
+.product .includes{font-size:.78rem;color:var(--dim);margin-top:10px;}
+.product .includes strong{color:var(--ink2);}
+
+.price-col{text-align:center;min-width:140px;}
+.price{font-size:1.8rem;font-weight:800;line-height:1;}
+.price-note{font-size:.65rem;color:var(--dim);margin-top:4px;}
+.buy-btn{
+  display:inline-block;margin-top:12px;
+  padding:10px 28px;border-radius:10px;
+  font-size:.8rem;font-weight:700;text-decoration:none;
+  transition:all .2s;cursor:pointer;border:none;
+}
+.buy-free{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border);}
+.buy-free:hover{background:rgba(26,122,74,.12);}
+.buy-paid{background:var(--ink);color:#fff;}
+.buy-paid:hover{background:#333;}
+.buy-tip{background:transparent;border:1px solid var(--rule);color:var(--ink);}
+.buy-tip:hover{border-color:#ccc;}
+
+.divider{max-width:900px;margin:0 auto;padding:0 24px;}
+.divider hr{border:none;border-top:1px solid var(--rule);}
+
+.faq{max-width:900px;margin:0 auto;padding:40px 24px 60px;}
+.faq h2{font-size:1.3rem;font-weight:700;margin-bottom:20px;text-align:center;}
+.faq-item{padding:16px 0;border-bottom:1px solid var(--rule);}
+.faq-item h3{font-size:.9rem;font-weight:600;margin-bottom:4px;}
+.faq-item p{font-size:.82rem;color:var(--ink2);}
+
+.tip-banner{
+  max-width:900px;margin:0 auto 40px;padding:0 24px;
+}
+.tip-inner{
+  background:var(--ink);color:#fff;border-radius:16px;padding:32px;text-align:center;
+}
+.tip-inner h3{font-size:1.1rem;font-weight:700;margin-bottom:6px;}
+.tip-inner p{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:16px;}
+.ens-box{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;padding:10px 22px;
+}
+.ens-box span{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:500;}
+.ens-box button{
+  font-size:.6rem;font-weight:600;padding:4px 10px;border-radius:4px;
+  background:rgba(255,255,255,.1);color:rgba(255,255,255,.6);border:none;cursor:pointer;
+}
+.ens-box button:hover{background:rgba(255,255,255,.15);color:#fff;}
+
+footer{text-align:center;padding:30px;font-size:.7rem;color:var(--dim);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Gewenbo Store</div>
+  <div class="nav-links">
+    <a href="https://gewenbo-hub.vercel.app">Portfolio</a>
+    <a href="https://gewenbo-blog.vercel.app">Blog</a>
+    <a href="https://github.com/gewenbo888">GitHub</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="badge">&#10024; Digital Products</div>
+  <h1>Premium Educational Resources</h1>
+  <div class="sub">Bilingual knowledge packs combining interactive web experiences with downloadable references.</div>
+  <div class="sub-cn">双语知识包——结合互动网页体验与可下载参考资料。</div>
+</div>
+
+<div class="products">
+
+  <!-- FREE -->
+  <div class="product">
+    <div>
+      <span class="tag tag-free">Free 免费</span>
+      <h2>Complete AI Tools Guide 2026</h2>
+      <div class="prod-cn">2026 AI工具完全指南</div>
+      <p>Learn to use 20+ AI tools with step-by-step bilingual instructions. ChatGPT, Claude, Midjourney, Sora, Suno, Cursor, and more.</p>
+      <div class="includes"><strong>Includes:</strong> Interactive web guide &middot; 8 categories &middot; 20+ tools &middot; Pro tips</div>
+    </div>
+    <div class="price-col">
+      <div class="price" style="color:var(--green);">Free</div>
+      <div class="price-note">Open access</div>
+      <a class="buy-btn buy-free" href="https://ai-tools-guide-henna.vercel.app" target="_blank">Access Now &rarr;</a>
+    </div>
+  </div>
+
+  <!-- PREMIUM 1 -->
+  <div class="product">
+    <div>
+      <span class="tag tag-premium">Premium</span>
+      <h2>Civilizations Compared — Complete Reference</h2>
+      <div class="prod-cn">中西文明对比——完整参考</div>
+      <p>70+ Western and Chinese historical figures across 8 parallel eras. Interactive web experience plus a beautifully formatted printable PDF reference card.</p>
+      <div class="includes"><strong>Includes:</strong> Interactive website &middot; Printable PDF &middot; Timeline poster data &middot; All bilingual</div>
+    </div>
+    <div class="price-col">
+      <div class="price">$9</div>
+      <div class="price-note">One-time purchase</div>
+      <a class="buy-btn buy-paid" href="https://civilizations-compared.vercel.app" target="_blank">Preview &rarr;</a>
+    </div>
+  </div>
+
+  <!-- PREMIUM 2 -->
+  <div class="product">
+    <div>
+      <span class="tag tag-premium">Premium</span>
+      <h2>Y-DNA Haplogroups — The Human Migration Atlas</h2>
+      <div class="prod-cn">Y-DNA单倍群——人类迁徙图谱</div>
+      <p>26 haplogroups mapped with interactive phylogenetic tree, regional filtering, and complete reference data. Perfect for ancestry researchers and educators.</p>
+      <div class="includes"><strong>Includes:</strong> Interactive guide &middot; Downloadable reference chart &middot; Phylogenetic tree data</div>
+    </div>
+    <div class="price-col">
+      <div class="price">$9</div>
+      <div class="price-note">One-time purchase</div>
+      <a class="buy-btn buy-paid" href="https://y-haplogroups.vercel.app" target="_blank">Preview &rarr;</a>
+    </div>
+  </div>
+
+  <!-- PREMIUM 3 -->
+  <div class="product">
+    <div>
+      <span class="tag tag-premium">Premium</span>
+      <h2>Quantum Cryptography Visual Course</h2>
+      <div class="prod-cn">量子密码学可视化课程</div>
+      <p>Understand why quantum computers break elliptic curve cryptography but can't touch hash functions — through animated visual explanations. No math background required.</p>
+      <div class="includes"><strong>Includes:</strong> Animated web course &middot; 6 interactive visualizations &middot; Summary PDF</div>
+    </div>
+    <div class="price-col">
+      <div class="price">$12</div>
+      <div class="price-note">One-time purchase</div>
+      <a class="buy-btn buy-paid" href="https://quantum-crypto-three.vercel.app" target="_blank">Preview &rarr;</a>
+    </div>
+  </div>
+
+  <!-- PREMIUM 4 -->
+  <div class="product">
+    <div>
+      <span class="tag tag-premium">Premium</span>
+      <h2>Technology Futures Framework (L1–L5)</h2>
+      <div class="prod-cn">技术未来框架（L1–L5）</div>
+      <p>11 technological domains mapped from current capability to civilizational transcendence. A strategic reference for investors, researchers, and technology leaders.</p>
+      <div class="includes"><strong>Includes:</strong> Interactive matrix &middot; Downloadable framework PDF &middot; 11×5 comparison data</div>
+    </div>
+    <div class="price-col">
+      <div class="price">$15</div>
+      <div class="price-note">One-time purchase</div>
+      <a class="buy-btn buy-paid" href="https://tech-levels.vercel.app" target="_blank">Preview &rarr;</a>
+    </div>
+  </div>
+
+  <!-- BUNDLE -->
+  <div class="product" style="border:2px solid rgba(100,60,200,.15);background:rgba(100,60,200,.02);">
+    <div>
+      <span class="tag tag-bundle">Best Value 最超值</span>
+      <h2>Complete Knowledge Bundle</h2>
+      <div class="prod-cn">完整知识合集</div>
+      <p>Everything above — all 4 premium resources plus the free AI Tools Guide. Save 40% compared to buying individually.</p>
+      <div class="includes"><strong>Includes:</strong> All 5 resources &middot; All PDFs &middot; All interactive sites &middot; Future updates free</div>
+    </div>
+    <div class="price-col">
+      <div class="price"><span style="text-decoration:line-through;color:var(--dim);font-size:1rem;font-weight:400;">$45</span> $27</div>
+      <div class="price-note">Save 40% &middot; 节省40%</div>
+      <a class="buy-btn buy-paid" href="#support" style="background:rgba(100,60,200,.9);">Get Bundle &rarr;</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="tip-banner" id="support">
+  <div class="tip-inner">
+    <h3>Pay with Crypto</h3>
+    <p>Send any amount to support this work. All resources remain freely accessible — payments unlock premium downloadable materials.</p>
+    <div class="ens-box">
+      <span>gewenbo.eth</span>
+      <button onclick="navigator.clipboard.writeText('gewenbo.eth').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='COPY',1500)})">COPY</button>
+    </div>
+    <p style="margin-top:12px;font-size:.72rem;color:rgba(255,255,255,.35);">ETH &middot; USDT &middot; USDC &middot; Any ERC-20 token</p>
+  </div>
+</div>
+
+<div class="divider"><hr></div>
+
+<div class="faq">
+  <h2>FAQ</h2>
+  <div class="faq-item">
+    <h3>Are the interactive websites free?</h3>
+    <p>Yes. All interactive web experiences are free and open-source forever. Premium purchases unlock downloadable PDFs, printable reference cards, and data exports.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How do I pay with crypto?</h3>
+    <p>Send ETH, USDT, USDC, or any ERC-20 token to gewenbo.eth. After sending, email or DM with your transaction hash to receive your premium materials.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Can I get a refund?</h3>
+    <p>Since all interactive content is freely previewable, you know exactly what you're getting before paying. But if you're unsatisfied, reach out and we'll work it out.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Will there be more resources?</h3>
+    <p>Yes. Bundle purchasers get all future additions at no extra cost.</p>
+  </div>
+</div>
+
+<footer>
+  <p>gewenbo.eth &middot; <a href="https://gewenbo-hub.vercel.app" style="color:var(--dim);">Portfolio</a> &middot; <a href="https://github.com/gewenbo888" style="color:var(--dim);">GitHub</a></p>
+</footer>
+
+</body>
+</html>
